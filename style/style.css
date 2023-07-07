@@ -1,0 +1,228 @@
+@charset "UTF-8";
+
+/* Adiciona uma fonte direto da web */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Adicionando a fonte dentro dos arquivos e nomeando como Android, atente-se aos formatos! */
+@font-face {
+    font-family: 'Android';
+    src: url('../fontes/IDroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+:root {
+    /* variaveis de cores */
+    --cor-1: #73db7863;
+    --cor0: #73DB79;
+    --cor1: #34C23B;
+    --cor2: #278F2C;
+    --cor3: #124214;
+    --cor4: #1d331e;
+
+    /* variaveis de fontes */
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
+}
+
+/* configuração global (seleciona todos os elementos) */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* configuração de body */
+body {
+    font-family: var(--fonte-padrao);
+    background-color: #73db7863;
+}
+
+/* Configuração de indicadores de links extrenos */
+a.externo::after {
+    content: '\00A0\1F517';
+}
+
+/* configuração de cabeçalho com tamanho min e gradiente */
+header {
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor4));
+    text-align: center;
+    min-height: 150px;
+    padding-top: 40px;
+}
+
+/* configuração de h1 do header com configurações na fonte e sombreamento */
+header > h1 {
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    color: white;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.367);
+}
+
+/* configuração de p do header com configurações na fonte e sombreamento */
+header > p {
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    color: white;
+    max-width: 500px;
+    padding: 0px 10px 0px 10px;
+    margin: auto;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.367);
+}
+
+/* configuração de cor e espaço no header */
+nav {
+    background-color: var(--cor4);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.37);
+}
+
+/* configuração de links no header*/
+nav > a {
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.5s;
+}
+
+/* configuração de passar o mouse em cima dos links no header*/
+nav > a:hover {
+    background-color: var(--cor2);
+    border-radius: 5px;
+}
+
+/* configuração de conteudo principal (main) */
+main{
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.473);
+    min-width: 300px;
+    max-width: 1000px;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 30px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+/* configuração do h1 dentro do main (conteudo principal) */
+main h1 {
+    font-family: var(--fonte-android);
+    color: var(--cor4);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+
+/* configuração do h2 dentro do main (conteudo principal) */
+main h2 {
+    background-image: linear-gradient(to right, var(--cor0), transparent);
+    font-family: var(--fonte-android);
+    color: var(--cor3);
+    font-weight: normal;
+    font-size: 1.3em;
+    text-indent: 10px;
+}
+
+/* configuração de paragrafo dentro do main (conteudo principal) */
+main p {
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 2em;
+    font-size: 1em;
+}
+
+/* configuração de strong dentro do main (conteudo principal) */
+main strong {
+    color: var(--cor3);
+    font-weight: bold;
+}
+
+/* configuração de links dentro do main (conteudo principal) */
+main a {
+    color: var(--cor4);
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--cor0);
+    padding: 2px 6px;
+}
+
+/* configuração de passar o mouse em cima do links dentro do main (conteudo principal) */
+main a:hover {
+    color: var(--cor2);
+    text-decoration: underline;
+}
+
+/* configuração de imagem dentro do main (conteudo principal) */
+main img {
+    width: 100%;
+}
+
+/* configuração de imagem de uma classe ".pequena" dentro do main (conteudo principal) */
+main img.pequena {
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+div.video {
+    background-color: var(--cor4);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56.5%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+/* configuração do conteudo extra do site (estilo) dentro do main (conteudo principal) */
+main aside {
+    background-color: var(--cor-1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.267);
+}
+
+/* configuração do h3 no conteudo extra do site dentro do main (conteudo principal) */
+main aside > h3 {
+    background-color: var(--cor3);
+    color: white;
+    padding: 5px 5px 5px 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+/* configuração do ul (lista) no conteudo extra do site dentro do main (conteudo principal) */
+main aside > ul {
+    list-style-type: '\2714\00A0';
+    list-style-position: inside;
+    columns: 2;
+}
+
+/* configuração do rodapé do site */
+footer {
+    background-color: var(--cor4);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+/* configuração do link no rodapé do site */
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+/* configuração do link quando se passa o mouse sobre no rodapé do site */
+footer a:hover {
+    color: var(--cor0);
+    text-decoration: underline;
+}
